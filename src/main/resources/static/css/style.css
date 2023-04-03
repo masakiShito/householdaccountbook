@@ -1,0 +1,55 @@
+/*for 共通設定（複数で使用されるプロパティの設定）*/
+body {
+    font-family: "Meiryo" ,sans-serif;
+    margin: 50px;
+}
+
+h1 {
+    color: #57cc99;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+}
+
+/*for ログイン画面*/
+.login-text {
+    width: 500px;
+}
+
+.login-button {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #57cc99;
+    color: #57cc99;
+  }
+  .login-button:hover {
+    color: #fff;
+  }
+  .login-button:hover:after {
+    width: 100%;
+  }
+  .login-button:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #57cc99;
+  }
