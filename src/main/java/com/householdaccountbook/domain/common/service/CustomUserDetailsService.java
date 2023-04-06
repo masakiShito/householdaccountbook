@@ -1,4 +1,4 @@
-package com.householdaccountbook.domain;
+package com.householdaccountbook.domain.common.service;
 
 import java.util.Collections;
 
@@ -6,6 +6,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import com.householdaccountbook.domain.common.CustomUserDetails;
+import com.householdaccountbook.domain.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 

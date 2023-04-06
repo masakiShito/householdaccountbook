@@ -1,4 +1,4 @@
-package com.householdaccountbook.domain;
+package com.householdaccountbook.domain.common;
 
 import java.util.Collection;
 
