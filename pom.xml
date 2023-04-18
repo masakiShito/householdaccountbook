@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com</groupId>
 	<artifactId>householdaccountbook</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	 <packaging>war</packaging>
 	<name>householdaccountbook</name>
 	<description>HouseholdAccountBook project for Spring Boot</description>
 	<properties>
@@ -72,6 +72,11 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 

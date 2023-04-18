@@ -8,9 +8,18 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.householdaccountbook.domain.common.CustomUserDetails;
-import com.householdaccountbook.domain.repository.UserRepository;
+import com.householdaccountbook.domain.repository.mapper.UserRepository;
 
 import lombok.RequiredArgsConstructor;
+
+/**
+* SpringSecurityの認証処理
+* SpringSecurityの規約に習い認証処理を実装
+* 権限については現時点では使用しない想定ではあるが、SpringSecurityでは使用するようになっているため
+* 空のリストとして設定のみ行う
+* @author　masaking
+* @version　1.0.0
+*/
 
 @Service
 @RequiredArgsConstructor
@@ -20,7 +29,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		System.out.println(username);
+
 		return userRepository.findByUsername(username)
 				.map(
 						user -> new CustomUserDetails(

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{fragments/layout :: layout(~{::title}, ~{::body})}">
+<head>
+    <title>トップページ | 家計簿アプリケーション</title>
+</head>
+<body>
+<h1 class="mt-3">家計簿アプリケーション</h1>
+<table border="1">
+	<thead>
+		<tr>
+			<th>コード</th>
+			<th>区分</th>
+			<th>名前</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="item : ${items}">
+			<td th:text="${item.itemCd}"></td>
+			<td th:text="${item.itemKbm}"></td>
+			<td th:text="${item.itemName}"></td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

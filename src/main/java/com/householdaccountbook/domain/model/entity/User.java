@@ -1,4 +1,4 @@
-package com.householdaccountbook.domain.model;
+package com.householdaccountbook.domain.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
