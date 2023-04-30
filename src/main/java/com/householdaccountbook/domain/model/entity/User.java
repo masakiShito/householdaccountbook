@@ -12,4 +12,5 @@ public class User {
 	private String password;
 	private String insertDate;
 	private String updateDate;
+	private String deleteFlg;
 }

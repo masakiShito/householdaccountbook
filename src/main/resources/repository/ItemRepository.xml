@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.householdaccountbook.domain.repository.mapper.ItemRepository">
+	<!-- 全件検索 -->
 	<select id="selectAll" resultType="com.householdaccountbook.domain.model.entity.Item">
-		SELECT ITEM_CD, ITEM_KBM, ITEM_NAME, UPDATE_DATE FROM M_ITEM
+		SELECT
+		  * 
+		FROM
+		  M_ITEM
+	</select>
+	
+	<!-- 主キー検索 -->
+	<select id="findById" resultType="com.householdaccountbook.domain.model.entity.Item">
+		SELECT * 
+		FROM 
+		  M_ITEM 
+		WHERE 
+		  item_cd=#{itemCd}
 	</select>
 </mapper>
